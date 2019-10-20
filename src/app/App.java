@@ -190,6 +190,17 @@ public class App {
 
         optional.ifPresent(System.out::println);
 
+        System.out.println("--------");
+
+        Entity entity = new Entity();
+        entity.value = 1;
+        callByReference(entity);
+        System.out.println(entity.value);
+
+    }
+
+    private static void callByReference(Entity entity) {
+        entity.value++;
     }
 
     private static int fibonacci(int value) {
